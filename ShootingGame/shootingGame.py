@@ -27,6 +27,11 @@ class Player(pygame.sprite.Sprite):
 
     def update(self):
         self.rect.x += self.speed_x #movimiento en x de la nave
+        #keep player within horizontal bounds
+        if self.rect.left < 0:
+            self.rect.left = 0
+        elif self.rect.right > 900:
+            self.rect.right = 900
         player.rect.y = 510 #posicion fija de la nave abajo
         
 #Clase meteoro
@@ -142,6 +147,8 @@ while not done:
         if laser.rect.y < -10:
             all_sprite_list.remove(laser)
             laser_list.remove(laser)
+
+
 
    
 
