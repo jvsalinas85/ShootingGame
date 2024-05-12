@@ -1,2 +1,2 @@
 # ShootingGame
-Game of player shooting meteors with lasers. With sounds
+Game of player shooting meteors with lasers. Includes sounds
